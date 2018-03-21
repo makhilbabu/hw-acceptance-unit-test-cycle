@@ -36,6 +36,10 @@ class MoviesController < ApplicationController
   def new
     # default: render 'new' template
   end
+  
+  def find_with_director
+    @movies = Movie.where(Director: Movie.find(params[:id]).director)
+  end
 
   def create
     @movie = Movie.create!(movie_params)
