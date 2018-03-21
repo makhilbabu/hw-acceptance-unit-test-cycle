@@ -1,0 +1,5 @@
+{
+  "root": "heroku static:deployheroku plugins:install heroku-cli-static",
+  "clean_urls": false,
+  "error_page": "heroku static:init"
+}
