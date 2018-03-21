@@ -1,6 +1,13 @@
 {
   "Cucumber Features": {
     "coverage": {
+      "/home/ec2-user/environment/hw-acceptance-unit-test-cycle/rottenpotatoes/app/models/movie.rb": [
+        1,
+        1,
+        0,
+        null,
+        null
+      ],
       "/home/ec2-user/environment/hw-acceptance-unit-test-cycle/rottenpotatoes/app/helpers/movies_helper.rb": [
         0,
         null,
@@ -10,13 +17,6 @@
         0
       ],
       "/home/ec2-user/environment/hw-acceptance-unit-test-cycle/rottenpotatoes/app/helpers/application_helper.rb": [
-        0,
-        0
-      ],
-      "/home/ec2-user/environment/hw-acceptance-unit-test-cycle/rottenpotatoes/app/models/movie.rb": [
-        0,
-        0,
-        0,
         0,
         0
       ],
@@ -92,6 +92,6 @@
         0
       ]
     },
-    "timestamp": 1521597346
+    "timestamp": 1521603010
   }
 }
