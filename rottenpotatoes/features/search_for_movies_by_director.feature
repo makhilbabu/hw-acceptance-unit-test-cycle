@@ -32,3 +32,11 @@ Scenario: can't find similar movies if we don't know director (sad path)
   When  I follow "Find Movies With Same Director"
   Then  I should be on the home page
   And   I should see "'Alien' has no director info"
+  
+Scenario: add movie to database
+  When I am on the new page
+  And I add "Shape of Water"
+  And I press "Add Movie"
+  Then I should be on the home page
+  And "Shape of Water" should be on home page
+  And I should see "Shape of Water was successfully created"

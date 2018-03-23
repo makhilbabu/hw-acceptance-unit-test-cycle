@@ -37,8 +37,14 @@ class MoviesController < ApplicationController
     # default: render 'new' template
   end
   
-  def find_with_director
-    @movies = Movie.where(Director: Movie.find(params[:id]).director)
+  def with_director
+    @movie = Movie.find(params[:id])
+    if @movie.director.empty? then
+      flash[:notice] = "'#{@movie.title}' has no director info"
+      redirect_to movies_path
+    else
+      @movies = Movie.where(Director: @movie.director)
+    end
   end
 
   def create
