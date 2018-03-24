@@ -15,5 +15,24 @@ When("I add {string}") do |string|
 end
 
 Then("{string} should be on home page") do |string|
-  redirect_to movies_path
+  flag = false;
+  Movie.all.hash do |movie|
+    if (movie.title == string)
+      flag = True;
+    end
+  end
+end
+
+When("I fill {string} with {string}") do |string, string2|
+  movie = Movie.new
+  if (string == "Title")
+    movie.title = string2
+  elsif (string == "Rating")
+    movie.rating = string2
+  elsif (string == "Director")
+    movie.director = string2
+  else
+    movie.release_date = string2
+  end
+  movie.save
 end

@@ -27,7 +27,7 @@ module NavigationHelpers
     when /^the edit page for "(.*)"$/
     	edit_movie_path Movie.find_by_title($1)
     	
-    when /^the new page"$/
+    when /^the new page$/
       '/movies/new'
     
     	

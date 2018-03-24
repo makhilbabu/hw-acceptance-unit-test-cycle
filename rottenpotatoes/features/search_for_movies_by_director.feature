@@ -35,8 +35,10 @@ Scenario: can't find similar movies if we don't know director (sad path)
   
 Scenario: add movie to database
   When I am on the new page
-  And I add "Shape of Water"
-  And I press "Add Movie"
+  And I fill "Title" with "Shape of Water"
+  And I fill "Rating" with "PG"
+  And I fill "Director" with "dir"
+  And I fill "Release Date" with "2017-05-25"
+  And I press "Save Changes"
   Then I should be on the home page
   And "Shape of Water" should be on home page
-  And I should see "Shape of Water was successfully created"
